@@ -1,0 +1,27 @@
+@import '../../styles/_colors'
+
+.btn
+    display: block
+    height: 38px
+    font-size: 16px
+    font-weight: bold
+    color: $primary-color
+    background-color: #fff
+    border: none
+    cursor: pointer
+    padding: 0
+    transition: 0.2s
+    outline: none
+    &:hover
+        color: $primary-color-hover
+    &:disabled
+        color: $light-font
+        background-color: rgb(215, 215, 215)
+    &__primary
+        width: 210px
+        background-color: $primary-color
+        color: rgb(254, 254, 254)
+        border-radius: 4px
+        &:hover:enabled
+            background-color: $primary-color-hover
+            color: rgb(254, 254, 254)

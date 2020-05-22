@@ -1,0 +1,26 @@
+@import "../../../styles/_colors"
+@import '../../../styles/_mixin'
+
+.user-card
+    width: 200px
+    text-align: center
+    color: $light-font
+    &__image
+        width: 70px
+        height: 70px
+        border-radius: 50%
+    &__name
+        @include heading-h2
+        margin: 20px 0
+        overflow: hidden
+        text-overflow: ellipsis
+    &__position
+        @include paragraph
+        margin: 0 0 12px
+    &__email
+        @include paragraph
+        margin: 0 0 12px
+        overflow: hidden
+        text-overflow: ellipsis
+    &__phone
+        @include paragraph

@@ -1,0 +1,84 @@
+@import '../../styles/_colors'
+    
+.header
+    position: fixed
+    width: 100%
+    top: 0
+    max-width: 1024px
+    padding: 0 30px
+    background-color: rgb(255,255,255)
+    &__container
+        display: flex
+        flex-flow: row
+        justify-content: space-between
+        align-items: center
+        height: 60px
+        margin: 0 auto
+    &__logo
+        z-index: 999
+        
+.menu
+    transition: all 0.5s
+    @media screen and (max-width: 768px)
+        visibility: hidden
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        background-color: rgba(0,0,0,0)
+    &_active
+        visibility: visible
+        background-color: rgba(0,0,0,0.5)
+    &__body
+        transition: all 0.5s
+        @media screen and (max-width: 768px)
+            position: absolute
+            top: 0
+            left: -100%            
+            width: 80vw
+            height: 100vh
+            background-color: #fff
+            padding-top: 60px
+        &_active
+            left: 0
+    &__list
+        @media screen and (max-width: 768px)
+            display: flex
+            flex-flow: column
+            width: 100%
+            padding: 25px 15px 0
+            border-top: 1px solid #ccc
+            border-bottom: 1px solid #ccc
+    &__link
+        text-decoration: none
+        color: $dark-font
+        font-size: 14px
+        margin-right: 28px
+        cursor: pointer
+        transition: color 0.2s
+        &:hover
+            color: $primary-color
+        &:last-child
+            margin-right: 0
+        &_active
+            color: $secondary-color
+        @media screen and (max-width: 768px)
+            margin-right: 0
+            margin-bottom: 
+            font-size: 16px
+            line-height: 24px
+            margin-bottom: 22px
+
+
+.menu-burger
+    display: none
+    cursor: pointer
+    &__icon
+        display: block
+    @media screen and (max-width: 768px)
+        display: block
+        z-index: 99
+
+
+        

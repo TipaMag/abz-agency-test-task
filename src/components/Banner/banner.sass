@@ -1,0 +1,29 @@
+@import '../../styles/_colors'
+@import '../../styles/_mixin'
+    
+.banner
+    width: 100%
+    padding: 115px 30px
+    background-image: url(../../assets/banner-photo.jpg)
+    background-position: center center
+    background-size: cover
+    @media screen and ( max-width: 768px )
+        padding: 65px 30px
+    @media screen and ( max-width: 425px )
+        padding: 75px 15px
+        text-align: center
+    &__content
+        display: flex
+        flex-flow: column
+        @media screen and ( max-width: 425px )
+            align-items: center
+    &__title
+        @include heading-h1
+        text-transform: uppercase
+        color: #fff
+        margin-bottom: 25px
+    &__description
+        @include paragraph
+        color: #fff
+        margin-bottom: 34px
+        max-width: 535px

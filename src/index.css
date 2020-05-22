@@ -1,0 +1,17 @@
+@import './styles/fonts.css';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, p {
+  margin: 0;
+  font-weight: 400;
+}

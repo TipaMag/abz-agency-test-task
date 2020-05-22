@@ -1,0 +1,43 @@
+@import '../../../styles/_colors'
+
+.modal
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: rgba(0,0,0, 0.5)
+    &__body
+        max-width: 400px
+        background: $background-color
+        border: 1px solid rgb(0, 0, 0)
+        border-radius: 4px
+    &__title
+        font-size: 24px
+        line-height: 30px
+        margin: 0
+        padding: 15px
+    &__description
+        margin: 0
+        padding: 15px
+        font-size: 16px
+        line-height: 24px
+        color: $light-font
+        border-top: 1px solid #ccc
+        border-bottom: 1px solid #ccc
+    &__controls
+        display: flex
+        justify-content: flex-end
+        padding: 15px
+    &__btn
+        font-size: 16px
+        width: 80px
+        height: 38px
+        background-color: $primary-color
+        color: rgb(254, 254, 254)
+        border: none
+        border-radius: 4px
+        cursor: pointer

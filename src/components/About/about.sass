@@ -1,0 +1,48 @@
+@import '../../styles/_colors'
+@import '../../styles/_mixin'
+  
+.about
+  padding: 150px 30px
+  @media screen and ( max-width: 768px )
+    padding: 120px 30px
+  @media screen and ( max-width: 425px )
+    padding: 75px 15px
+  &__title
+    @include heading-h1
+    text-align: center
+    margin-bottom: 65px
+    @media screen and ( max-width: 425px )
+      margin-bottom: 32px
+  &__content
+    display: flex
+    @media screen and ( max-width: 680px )
+      flex-flow: row wrap
+      justify-content: center
+  &__image
+    width: 40%
+    margin-right: 50px
+    @media screen and ( max-width: 680px )
+      width: 300px
+      heigth: 250px
+      margin-right: 0
+    @media screen and ( max-width: 680px )
+      width: 90%
+    img
+      width: 106%
+      height: 88%
+  &__text
+    width: 60%
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    @media screen and ( max-width: 680px )
+      width: 100%
+    @media screen and ( max-width: 425px )
+      align-items: center
+  &__subtitle
+    @include heading-h2
+    margin-bottom: 20px
+  &__description
+    @include paragraph
+    margin-bottom: 22px
+    text-align: justify
