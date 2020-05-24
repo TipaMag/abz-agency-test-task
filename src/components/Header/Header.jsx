@@ -30,6 +30,12 @@ const Header = () => {
         })
     }
 
+    const handleOverlayMenu = (e) => {
+        if (e.target.classList.contains("menu")) {
+            setMobileMenu(false)
+        }
+    }
+
     return (
         <header className="header">
             <div className="header__container">
@@ -38,7 +44,7 @@ const Header = () => {
                     <img src={logo} alt="logo" />
                 </div>
 
-                <div className={!mobileMenu ? "menu" : "menu menu_active"}>
+                <div className={!mobileMenu ? "menu" : "menu menu_active"} onClick={e => handleOverlayMenu(e)}>
                     <nav className={!mobileMenu ? "menu__body" : "menu__body menu__body_active"}>
                         <div className="menu__list">
                             <Link className="menu__link" activeClass="menu__link_active" to='about' spy={true} smooth={true} offset={50} duration={500}>

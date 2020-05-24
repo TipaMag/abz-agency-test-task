@@ -15,6 +15,9 @@ const RegistrationForm = ({ positions, onHandleSubmit }) => {
     let handleChange = (fileData) => {
         if (fileData?.length) {
             let fileName = fileData[0].name
+            // if (fileName.length > 30) {
+            //     fileName = `${fileName.slice(0, 30)}...`
+            // }
             setFileData({
                 fileSelected: true,
                 fileName: fileName,
@@ -97,7 +100,7 @@ const RegistrationForm = ({ positions, onHandleSubmit }) => {
             <div className="loadphoto">
                 <p className="loadphoto__title">Photo</p>
                 <div className="loadphoto__container">
-                    <span className="loadphoto__filename">{!fileData.fileSelected ? 'Upload your photo' : fileData.fileName}</span>
+                    <span className="loadphoto__filename">{fileData.fileSelected ? fileData.fileName : 'Upload your photo'}</span>
                     <label className="loadphoto__lable">Browse
                         <input className="loadphoto__input" name="photo" type="file" accept="image/jpeg, image/jpg"
                             onChange={e => handleChange(e.target.files)}
@@ -105,7 +108,7 @@ const RegistrationForm = ({ positions, onHandleSubmit }) => {
                                 required: true,
                                 validate: {
                                     imageSize: value => imageCheckSize(value[0].size, 5120),
-                                    imageResolution: async value => console.log(await imageCheckResolution(value[0]))
+                                    imageResolution: async value => await imageCheckResolution(value[0])
                                 }
                             })}/>
                     </label>
